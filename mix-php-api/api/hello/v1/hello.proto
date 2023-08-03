@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package demo.api.v1;
+
+//import "google/api/annotations.proto";
+//import "validate/validate.proto";
+
+option go_package = "demo.api.hello;v1";
+//option php_namespace = "Php\\Demo\\Api\\V1";
+//option php_metadata_namespace = "GPBMetadata";
+
+service Hello {
+  rpc sayHello(HelloReq) returns (HelloResp) {
+//    option (google.api.http) = {
+//      get: "/v1/demo/hello"
+//    };
+  }
+}
+
+message HelloReq {
+  int64 id = 1;
+}
+
+message HelloResp {
+  int64 id = 1;
+  string message = 2;
+}
